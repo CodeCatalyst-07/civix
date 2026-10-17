@@ -1,0 +1,14 @@
+# Roadmap
+
+1. **Core project foundation** — implemented: tooling, contracts, consistency validation, synthetic fixtures, configuration, tests, health, and minimal shell.
+2. **Gemma API proof of concept** — offline implementation complete: official Google SDK, server-only provider, text/image inputs, experimental JSON validation, errors/retries/timeouts/concurrency, mocked tests and explicit synthetic CLI experiments. Saved live reports confirm basic text generation. Structured reliability remains unresolved after 504/timeout failures; isolated selection and safe per-attempt diagnostics are implemented. Image, MIME-mode and multilingual checks remain pending. See gemma-capability-report.md.
+3. **PDF and image processing** — implemented offline: secure PDF/PNG/JPEG ingestion, isolated bounded parsing, selectable PDF text/items, image normalization, page/segment identity, and optional local image OCR. Scanned PDF pages remain unreadable until a PDF renderer is installed.
+4. **AI analysis and evidence verification** — implemented offline for source text: injected Gemma extraction, strict Phase 4 contracts, bounded context, exact source-reference validation, narrow deterministic date/fee checks, typed failures, and synthetic tests. OCR references are location-matched only; OCR accuracy and semantic support remain unverified.
+5. **First functional UI** — implemented: in-memory PDF/image upload, bounded analysis endpoint, evidence review UI, language selection, accurate provider failure states, and development-only synthetic demo mode.
+6. **Government document intelligence and OCR** — partial: conservative classification, optional local Tesseract OCR for images, and OCR evidence/UI handling. Scanned-PDF rendering and OCR engine installation are environment requirements; see document-processing.md.
+7. **Document-grounded chat** — answers grounded in uploaded documents.
+8. **Productivity and accessibility** — separate user action progress, useful exports, and accessible interactions.
+9. **Security and deployment** — privacy, retention, threat modeling, abuse controls, and production operations.
+10. **Evaluation and competition preparation** — civic benchmark, failure analysis, and demonstration.
+
+Phase 2 implementation is complete within its offline boundary; basic text works in saved live reports; PNG, structured JSON/MIME-mode, injection and multilingual fidelity remain unverified. Phase 6 keeps local OCR output unverified and reports unavailable OCR clearly. This workspace lacks Tesseract and a PDF renderer, so OCR execution and scanned-PDF coverage could not be demonstrated here. Live model accuracy and semantic claim verification remain readiness gates. See document-processing.md and ai-document-intelligence.md for capabilities and limits. Each phase must preserve trustworthy uncertainty and pass relevant tests before proceeding.
